@@ -4,8 +4,8 @@ object Main {
       case true => Nil
       case false =>
         list.head match {
-          case a:List[_] => printList(a) ++ printList(list.tail)
-          case _ => list.head :: printList(list.tail)
+          case a:List[_] => flatten(a) ++ flatten(list.tail)
+          case _ => list.head :: flatten(list.tail)
         }
     }    
 }
